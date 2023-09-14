@@ -1,4 +1,8 @@
-## 7.0.1 (2023-09-14)
+## [1.0.1](https://github.com/danilo-pimentel/Baileys/compare/v7.0.1...v1.0.1) (2023-09-14)
+
+
+
+## [7.0.1](https://github.com/danilo-pimentel/Baileys/compare/07291d8ef69c886bd1aefb3b474a8b7553daebad...v7.0.1) (2023-09-14)
 
 
 ### Bug Fixes
