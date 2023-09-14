@@ -35,7 +35,7 @@ export type SocketConfig = {
 	mobile?: boolean
     /** proxy agent */
     agent?: Agent
-    /** local IP address to bo used as source for tls connections */
+    /** local IP address to be used as source for tls connections */
     localAddress: string | undefined
     /** pino logger */
     logger: Logger
