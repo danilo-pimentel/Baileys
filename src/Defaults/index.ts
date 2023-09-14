@@ -57,6 +57,7 @@ export const DEFAULT_CONNECTION_CONFIG: SocketConfig = {
 	connectTimeoutMs: 20_000,
 	keepAliveIntervalMs: 30_000,
 	logger: logger.child({ class: 'baileys' }),
+	localAddress: undefined,
 	printQRInTerminal: false,
 	emitOwnEvents: true,
 	defaultQueryTimeoutMs: 60_000,
