@@ -1,6 +1,6 @@
 {
-  "name": "@danilo-pimentel/baileys",
-  "version": "7.0.1",
+  "name": "@danilopimentel/baileys",
+  "version": "1.0.0",
   "description": "WhatsApp API",
   "keywords": [
     "whatsapp",
@@ -14,7 +14,7 @@
   ],
   "homepage": "https://github.com/danilo-pimentel/Baileys",
   "repository": {
-    "url": "git@github.com:danilo-pimentel/Baileys.git"
+    "url": "git+ssh://git@github.com/danilo-pimentel/Baileys.git"
   },
   "license": "MIT",
   "author": "Adhiraj Singh",
@@ -98,5 +98,11 @@
       "optional": true
     }
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "bugs": {
+    "url": "https://github.com/danilo-pimentel/Baileys/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  }
 }
