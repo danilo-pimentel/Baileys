@@ -24,7 +24,7 @@ export enum DisconnectReason {
     badSession = 500,
     restartRequired = 515,
     multideviceMismatch = 411,
-    addressNotAvailable = 413
+    addressNotAvailable = 430
 }
 
 export type WAInitResponse = {
