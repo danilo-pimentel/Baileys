@@ -1,3 +1,7 @@
+## [1.0.3](https://github.com/danilo-pimentel/Baileys/compare/v1.0.2...v1.0.3) (2023-09-15)
+
+
+
 ## [1.0.2](https://github.com/danilo-pimentel/Baileys/compare/v1.0.1...v1.0.2) (2023-09-15)
 
 
