@@ -353,6 +353,7 @@ export const getCallStatusFromNode = ({ tag, attrs }: BinaryNode) => {
 }
 
 const UNEXPECTED_SERVER_CODE_TEXT = 'Unexpected server response: '
+const EADDRNOTAVAIL_CODE_TEXT = 'bind EADDRNOTAVAIL '
 
 export const getCodeFromWSError = (error: Error) => {
 	let statusCode = 500
@@ -361,6 +362,8 @@ export const getCodeFromWSError = (error: Error) => {
 		if(!Number.isNaN(code) && code >= 400) {
 			statusCode = code
 		}
+	} else if(error?.message?.includes(EADDRNOTAVAIL_CODE_TEXT)) {
+		statusCode = 430
 	} else if(
 		(error as any)?.code?.startsWith('E')
 		|| error?.message?.includes('timed out')
