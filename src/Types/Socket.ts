@@ -33,6 +33,13 @@ export type SocketConfig = {
     keepAliveIntervalMs: number
 	/** should baileys use the mobile api instead of the multi device api */
 	mobile?: boolean
+
+    localeLanguage?: string
+    localeCountry?: string
+    osVersion?: string
+    platform: proto.ClientPayload.UserAgent.Platform
+    manufacturer?: string
+
     /** proxy agent */
     agent?: Agent
     /** local IP address to be used as source for tls connections */

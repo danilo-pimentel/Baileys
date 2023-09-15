@@ -1,10 +1,11 @@
-import { proto } from '../../WAProto'
-import { makeLibSignalRepository } from '../Signal/libsignal'
-import type { AuthenticationState, MediaType, SocketConfig, WAVersion } from '../Types'
-import { Browsers } from '../Utils'
+import {proto} from '../../WAProto'
+import {makeLibSignalRepository} from '../Signal/libsignal'
+import type {AuthenticationState, MediaType, SocketConfig, WAVersion} from '../Types'
+import {Browsers} from '../Utils'
 import logger from '../Utils/logger'
-import { version } from './baileys-version.json'
+import {version} from './baileys-version.json'
 import phoneNumberMCC from './phonenumber-mcc.json'
+import Platform = proto.ClientPayload.UserAgent.Platform;
 
 export const UNAUTHORIZED_CODES = [401, 403, 419]
 
@@ -53,6 +54,7 @@ export const PROCESSABLE_HISTORY_TYPES = [
 export const DEFAULT_CONNECTION_CONFIG: SocketConfig = {
 	version: version as WAVersion,
 	browser: Browsers.baileys('Chrome'),
+	platform: Platform.MACOS,
 	waWebSocketUrl: 'wss://web.whatsapp.com/ws/chat',
 	connectTimeoutMs: 20_000,
 	keepAliveIntervalMs: 30_000,

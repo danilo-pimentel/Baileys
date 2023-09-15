@@ -9,11 +9,11 @@ import { encodeBigEndian } from './generics'
 import { createSignalIdentity } from './signal'
 
 const getUserAgent = (config: SocketConfig): proto.ClientPayload.IUserAgent => {
-	const osVersion = config.mobile ? '15.3.1' : '0.1'
+	const osVersion = config.osVersion ? config.osVersion : (config.mobile ? '15.3.1' : '0.1')
 	const version = config.mobile ? [2, 22, 24] : config.version
 	const device = config.mobile ? 'iPhone_7' : 'Desktop'
-	const manufacturer = config.mobile ? 'Apple' : ''
-	const platform = config.mobile ? proto.ClientPayload.UserAgent.Platform.IOS : proto.ClientPayload.UserAgent.Platform.MACOS
+	const manufacturer = config.manufacturer ? config.manufacturer : (config.mobile ? 'Apple' : '')
+	const platform = config.platform ? config.platform : (config.mobile ? proto.ClientPayload.UserAgent.Platform.IOS : proto.ClientPayload.UserAgent.Platform.MACOS)
 	const phoneId = config.mobile ? { phoneId: config.auth.creds.phoneId } : {}
 
 	return {
@@ -30,8 +30,8 @@ const getUserAgent = (config: SocketConfig): proto.ClientPayload.IUserAgent => {
 		manufacturer,
 		device,
 		osBuildNumber: osVersion,
-		localeLanguageIso6391: 'en',
-		localeCountryIso31661Alpha2: 'US',
+		localeLanguageIso6391: config.localeLanguage ? config.localeLanguage : 'en',
+		localeCountryIso31661Alpha2: config.localeCountry ? config.localeCountry : 'US',
 		...phoneId
 	}
 }
